@@ -1,0 +1,24 @@
+
+  <div class="flex-parent jc-center">
+
+    <div *ngIf="isConnected">
+      <div class="flex-parent jc-center">
+
+        <h1>Bienvenue {{username}}</h1>
+      </div>
+
+      <div class="flex-parent jc-center">
+
+        <h2>Vous êtes arrivé·e à l'énigme n°{{questionReached}}</h2>
+      </div>
+
+      <div class="flex-parent jc-center">
+
+        <button routerLink="../questions/{{questionReached}}">Continuer la chasse</button>
+      </div>
+    </div>
+    <div *ngIf="!isConnected">
+      <app-login></app-login>
+    </div>
+
+  </div>
