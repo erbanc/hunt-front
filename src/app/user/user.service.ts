@@ -21,6 +21,6 @@ export class UserService {
 
   getUsername() {
 
-    return this.cookieService.get("LA_CHASSE_USERNAME")
+    return this.cookieService.get("THE_HUNT_USERNAME")
   }
 }

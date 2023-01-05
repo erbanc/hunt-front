@@ -19,7 +19,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
 
-    this.username = this.cookieService.get("LA_CHASSE_USERNAME")
+    this.username = this.cookieService.get("THE_HUNT_USERNAME")
     if (!!this.username) {
       this.isConnected = true
       this.getUserInfos(this.username)

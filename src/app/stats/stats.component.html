@@ -1,0 +1,24 @@
+<div [ngStyle]="{background: 'assets/img/' + questionId + '.jpg)'}">
+  {{currentQuestion.html}}
+  <div class="flex-parent jc-center">
+
+    <p>{{currentQuestion.text}}</p>
+  </div>
+  <div class="flex-parent jc-center">
+
+    <form [formGroup]="answerForm" (ngSubmit)="onSubmit()">
+      <div>
+        <input id="answer" type="text" formControlName="answer" alt="answer">
+      </div>
+      <div class="flex-parent jc-center">
+
+        <button class="button" type="submit">Envoyer</button>
+      </div>
+    </form>
+  </div>
+  <br/>
+  <div class="flex-parent jc-center">
+
+    <button routerLink="/home">Retour</button>
+  </div>
+</div>

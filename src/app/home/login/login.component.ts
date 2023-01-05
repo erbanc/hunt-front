@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       this.loginService.login(username, password).subscribe((data: LoginResult) => {
         const loginResult = {...data};
         if (loginResult.validated) {
-          this.cookieService.set("LA_CHASSE_USERNAME", loginResult.username)
+          this.cookieService.set("THE_HUNT_USERNAME", loginResult.username)
           this.toastrService.success("Connecté en tant que " + username)
           location.reload()
         } else {
