@@ -19,6 +19,6 @@ export class LoginService {
 
   login(username: string | null | undefined, password: string | null | undefined) {
 
-    return this.httpClient.post<LoginResult>("http://localhost:8080/hunt/api/login", {username, password});
+    return this.httpClient.post<LoginResult>("https://hunt-back.riri4ever.synology.me/hunt/api/login", {username, password});
   }
 }

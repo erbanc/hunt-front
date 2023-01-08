@@ -1,9 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~mdb-ui-kit/css/mdb.min.css';
+
+:root {
+  --primary: #0aa598;
+}
 
 .flex-parent {
   display: flex;
 }
-
+.title-center {
+  text-align: center;
+}
 .jc-center {
   justify-content: center;
 }
@@ -11,3 +19,8 @@
 button.margin-right {
   margin-right: 20px;
 }
+
+.navbar {
+  background-color: var(--primary);
+}
+

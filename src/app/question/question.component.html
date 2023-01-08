@@ -1,8 +1,9 @@
 <div [ngStyle]="{background: 'assets/img/' + questionId + '.jpg)'}">
-  {{currentQuestion.html}}
   <div class="flex-parent jc-center">
-
-    <p>{{currentQuestion.text}}</p>
+    <div [innerHtml]="transform(currentQuestion.html)"></div>
+  </div>
+  <div class="flex-parent jc-center">
+    <div [innerHtml]="transform(currentQuestion.text)"></div>
   </div>
   <div class="flex-parent jc-center">
 
@@ -12,13 +13,13 @@
       </div>
       <div class="flex-parent jc-center">
 
-        <button class="button" type="submit">Envoyer</button>
+        <button class="btn" type="submit">Submit</button>
       </div>
     </form>
   </div>
   <br/>
   <div class="flex-parent jc-center">
 
-    <button routerLink="/home">Retour</button>
+    <button class="btn" routerLink="/home">Back</button>
   </div>
 </div>

@@ -4,6 +4,7 @@ import {UserService} from "../user/user.service";
 import {QuestionService} from "./question.service";
 import {FormBuilder} from "@angular/forms";
 import {ToastrService} from "ngx-toastr";
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 export interface Question {
@@ -33,7 +34,8 @@ export class QuestionComponent implements OnInit {
               private router: Router,
               private userService: UserService,
               private questionService: QuestionService,
-              private toastrService: ToastrService) {
+              private toastrService: ToastrService,
+              private sanitizer: DomSanitizer) {
   }
 
   ngOnInit(): void {
@@ -55,6 +57,10 @@ export class QuestionComponent implements OnInit {
     } else {
       this.router.navigate(['/404'])
     }
+  }
+
+  transform(html: string): any {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   private getCurrentQuestion() {

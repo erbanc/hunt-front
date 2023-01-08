@@ -30,10 +30,8 @@ export class LoginComponent implements OnInit {
         const loginResult = {...data};
         if (loginResult.validated) {
           this.cookieService.set("THE_HUNT_USERNAME", loginResult.username)
-          this.toastrService.success("Connecté en tant que " + username)
+          this.toastrService.success("Logged-in as " + username)
           location.reload()
-        } else {
-          this.toastrService.error("Erreur d'authentification, vérifiez vos identifiants")
         }
       })
     }

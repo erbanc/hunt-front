@@ -4,17 +4,17 @@
     <div *ngIf="isConnected">
       <div class="flex-parent jc-center">
 
-        <h1>Bienvenue {{username}}</h1>
+        <h1>Welcome {{username}}</h1>
       </div>
 
       <div class="flex-parent jc-center">
 
-        <h2>Vous êtes arrivé·e à l'énigme n°{{questionReached}}</h2>
+        <h2>You reached question n°{{questionReached}}</h2>
       </div>
 
       <div class="flex-parent jc-center">
 
-        <button routerLink="../questions/{{questionReached}}">Continuer la chasse</button>
+        <button class="btn" routerLink="../questions/{{questionReached}}">Continue hunting</button>
       </div>
     </div>
     <div *ngIf="!isConnected">

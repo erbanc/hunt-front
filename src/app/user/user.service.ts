@@ -16,7 +16,7 @@ export class UserService {
 
   getUserInfos(username: string) {
 
-    return this.httpClient.get<UserInfo>("http://localhost:8080/hunt/api/users/" + username)
+    return this.httpClient.get<UserInfo>("https://hunt-back.riri4ever.synology.me/hunt/api/users/" + username)
   }
 
   getUsername() {

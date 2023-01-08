@@ -24,13 +24,13 @@ export class StatsService {
 
   getUserStats(username: string) {
 
-    return this.httpClient.get<UserStats>("http://localhost:8080/hunt/api/stats/", {
+    return this.httpClient.get<UserStats>("https://hunt-back.riri4ever.synology.me/hunt/api/stats/", {
       username: username
     })
   }
 
   getLeaderboard(questionId: string) {
 
-    return this.httpClient.get<Leaderboard>("http://localhost:8080/hunt/api/stats/leaderboard")
+    return this.httpClient.get<Leaderboard>("https://hunt-back.riri4ever.synology.me/hunt/api/stats/leaderboard")
   }
 }

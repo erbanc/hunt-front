@@ -13,23 +13,24 @@ import { QuestionComponent } from './question/question.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
 import {ReactiveFormsModule} from "@angular/forms";
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,
     HomeModule,
     HttpClientModule,
     CommonModule,
-    BrowserAnimationsModule, // required animations module
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
     AppRoutingModule,
-    ReactiveFormsModule,
-    // ToastrModule added
+    ReactiveFormsModule
   ],
   providers: [CookieService, ToastrService],
   bootstrap: [AppComponent]

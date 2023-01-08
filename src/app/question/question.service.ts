@@ -12,7 +12,7 @@ export class QuestionService {
 
   isQuestionAccessible(username: string, question: string) {
 
-    return this.httpClient.post<boolean>("http://localhost:8080/hunt/api/questions/is-accessible", {
+    return this.httpClient.post<boolean>("https://hunt-back.riri4ever.synology.me/hunt/api/questions/is-accessible", {
       question: question,
       username: username
     })
@@ -20,12 +20,12 @@ export class QuestionService {
 
   getQuestion(questionId: string) {
 
-    return this.httpClient.get<Question>("http://localhost:8080/hunt/api/questions/" + questionId)
+    return this.httpClient.get<Question>("https://hunt-back.riri4ever.synology.me/hunt/api/questions/" + questionId)
   }
 
   answer(answer: string, id: string, username: string) {
 
-    return this.httpClient.post<boolean>("http://localhost:8080/hunt/api/questions/answer", {
+    return this.httpClient.post<boolean>("https://hunt-back.riri4ever.synology.me/hunt/api/questions/answer", {
       "answer": answer,
       "id": id,
       "username": username

@@ -1,20 +1,12 @@
-<h1>Bienvenue dans la chasse !</h1>
-<h2>Connecte-toi pour accéder à ta chasse</h2>
-<div class="login-form">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div>
-      <label for="username">
-        Nom d'utilisateur
-      </label>
-      <input id="username" type="text" formControlName="username">
-    </div>
-
-    <div>
-      <label for="password">
-        Mot de passe
-      </label>
-      <input id="password" type="password" formControlName="password">
-    </div>
-    <button class="button" type="submit">Se connecter</button>
-  </form>
-</div>
+<p class="test-center title-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Welcome, Hunter !</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="mb-4">
+    <label class="form-label" for="username">Username</label>
+    <input class="form-control" id="username" type="text" formControlName="username">
+  </div>
+  <div class="mb-4">
+    <label class="form-label" for="password">Password</label>
+    <input id="password" class="form-control" type="password" formControlName="password">
+  </div>
+  <button class="btn btn-primary btn-block mb-4" type="submit">Log in</button>
+</form>
